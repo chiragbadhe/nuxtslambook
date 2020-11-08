@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen bg-gradient-to-r items-center from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
+    class="container-lg h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
     <div class="">
       <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center   " v-if="isSuccessScreenActive">
         <h1 class="font-bold text-6xl">Slam Book Created!</h1>
