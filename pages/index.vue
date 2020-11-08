@@ -49,11 +49,12 @@
         </button>
       </div>
 
-      <div v-else class="text-center text-white m-6">
+      <div v-else class="text-center text-white m-6 flex flex-col items-center w-auto">
         <h1 class="text-6xl font-bold">What Your Friends Think About You?</h1>
         <p class="text-2xl p-6">
           Your Friends Will Give Answers Of Intersting Questions About You
         </p>
+        <img src="../images/main.png" alt="image" height="20%" width="20%">
         <div class="text-center mt-10">
           <button class="border border-white-500 rounded p-3 bg-transparent text-white-500"
             @click="isEnterNameScreenActive = true">
@@ -74,7 +75,7 @@
         isQuestionScreenActive: false,
         isSuccessScreenActive: false,
         baseUrl: '',
-        link: "{{baseUrl}} + 'upload?name=' + name"
+        link: this.baseUrl + 'upload?name=' + this.name
       }
     },
     methods: {
