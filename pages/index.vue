@@ -1,14 +1,14 @@
 <template>
   <div
-    class="h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
+    class="h-screen bg-gradient-to-r items-center from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
     <div class="">
-      <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center" v-if="isSuccessScreenActive">
+      <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center   " v-if="isSuccessScreenActive">
         <h1 class="font-bold text-6xl">Slam Book Created!</h1>
         <p class="text-4xl">Now , Share Link With Your Friends</p>
         <a class="text-3xl p-2 rounded-full pl-6 pr-6 bg-gray-200 m-4" id="link" :href="baseUrl + 'upload?name=' + name"
           style="color: blue">{{
-          baseUrl + 'upload?name=' + name }}
-        </a>
+          baseUrl + 'upload?name=' + name
+        }}</a>
 
         <input type="text" value="copyLink" id="userLink" v-model="link">
         <button @click="copyLink()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full mt-4 ">Copy Link</button>
@@ -41,11 +41,10 @@
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
-
+        
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
           @click="isSuccessScreenActive = true">FINISH</button>
       </div>
-
       <div class="bg-white p-8 rounded-lg text-center flex flex-col" v-else-if="isEnterNameScreenActive">
         <label class="block uppercase tracking-wide text-3xl pb-3text-xs font-bold mb-4" for="grid-password">
           Enter Your Name:

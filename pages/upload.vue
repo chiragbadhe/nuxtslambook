@@ -8,8 +8,16 @@
       <div class=" pl-6 text-pink-500" v-for="question in questions" :key="question.index">
         Question: {{ question.question }} <br />
         <p class=" text-indigo-700"> Answer: {{ question.answer }} </p>
+
       </div>
+      <div class="font-bold bg-white rounded-lg overflow-auto" >
+          <a href="#" class="text-xl p-4 bg-gray-200">create Your Own</a>
+      </div>
+      
     </div>
+     
+
+    
 
 
 
