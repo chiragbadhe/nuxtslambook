@@ -10,8 +10,8 @@
         <p class=" text-indigo-700"> Answer: {{ question.answer }} </p>
 
       </div>
-      <div class="font-bold bg-white rounded-lg overflow-auto" >
-          <a href="#" class="text-xl p-4 bg-gray-200">create Your Own</a>
+      <div class="p-3 bg-gray-200 rounded-lg text-xl text-center" @click="startAgain()">
+          <nuxt-link to="/" class="text-xl p-4 bg-gray-200 text-indigo-700">Create Your Own</nuxt-link>
       </div>
       
     </div>
@@ -179,63 +179,63 @@
         userName: '',
         questions: [{
             index: 0,
-            question: '1. Any nickname for' + this.senderName,
+            question: '1. Any nickname for',
             answer: '',
             show: false,
           },
 
           {
             index: 1,
-            question: 'Hello 1',
+            question: '2. Colour which suits',
             answer: '',
             show: false,
           },
 
           {
             index: 2,
-            question: 'Hello 2',
+            question: '3. One Thing You Like in ',
             answer: '',
             show: false,
           },
 
           {
             index: 3,
-            question: 'Hello 3',
+            question: '4. One Thing You Dislike in',
             answer: '',
             show: false,
           },
 
           {
             index: 4,
-            question: 'Hello 4',
+            question: '5. Things that are similar in You and',
             answer: '',
             show: false,
           },
 
           {
             index: 5,
-            question: 'Hello 5',
+            question: '6. Any sweet memories with ',
             answer: '',
             show: false,
           },
 
           {
             index: 6,
-            question: 'Hello 6',
+            question: '7. Your relationship with',
             answer: '',
             show: false,
           },
 
           {
             index: 7,
-            question: 'Hello 7',
+            question: '8. Any song dedicated for',
             answer: '',
             show: false,
           },
 
           {
             index: 8,
-            question: 'Hello 8',
+            question: '9. Can I post Your Answers',
             answer: '',
             show: false,
           },
@@ -251,6 +251,10 @@
         console.log(index)
         console.log(this.questions[index + 1])
         this.questions[index].show = true
+      },
+
+      startAgain(){
+
       },
 
       previous(index) {

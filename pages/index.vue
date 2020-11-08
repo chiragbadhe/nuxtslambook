@@ -39,9 +39,8 @@
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
-
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
         
+        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
           @click="isSuccessScreenActive = true">FINISH</button>
       </div>
