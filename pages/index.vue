@@ -5,7 +5,7 @@
       <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center w-screen h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 " v-if="isSuccessScreenActive">
         <h1 class="font-bold text-6xl">Slam Book Created!</h1>
         <p class="text-4xl">Now , Share Link With Your Friends</p>
-        <a class="text-3xl p-2 rounded-full pl-6 pr-6 bg-gray-200 m-4" id="link" :href="baseUrl + 'upload?name=' + name"
+        <a class="text-3xl" id="link" :href="baseUrl + 'upload?name=' + name"
           style="color: blue">{{
           baseUrl + 'upload?name=' + name
         }}</a>
@@ -36,7 +36,15 @@
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</
+        
+        
+        
+        
+        
+        
+        
+        p>
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
         
