@@ -181,7 +181,7 @@
         userName: '',
         questions: [{
             index: 0,
-            question: '1. Any nickname for ' + this.$route.query.name,
+            question: '1. Any nickname for :' + this.$route.query.name,
             answer: '',
             show: false,
             error: null,
@@ -189,7 +189,7 @@
 
           {
             index: 1,
-            question: '2. Colour which suits' + this.$route.query.name,
+            question: '2. Colour which suits :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -198,7 +198,7 @@
 
           {
             index: 2,
-            question: '3. One Thing You Like in ' + this.$route.query.name,
+            question: '3. One Thing You Like in :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -207,7 +207,7 @@
 
           {
             index: 3,
-            question: '4. One Thing You Dislike in' + this.$route.query.name,
+            question: '4. One Thing You Dislike in :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -216,7 +216,7 @@
 
           {
             index: 4,
-            question: '5. Things that are similar in You and' + this.$route.query.name,
+            question: '5. Things that are similar in You and :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -225,7 +225,7 @@
 
           {
             index: 5,
-            question: '6. Any sweet memories with ' + this.$route.query.name,
+            question: '6. Any sweet memories with :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -234,7 +234,7 @@
 
           {
             index: 6,
-            question: '7. Your relationship with',
+            question: '7. Your relationship with :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
@@ -243,7 +243,7 @@
 
           {
             index: 7,
-            question: '8. Any song dedicated for',
+            question: '8. Any song dedicated for :' + this.$route.query.name,
             answer: '',
             show: false,
                         error: null,
