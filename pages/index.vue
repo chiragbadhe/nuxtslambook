@@ -4,19 +4,15 @@
     <div class="">
       <div class="bg-white p-6 rounded-lg flex-col flex items-center" v-if="isSuccessScreenActive">
         <h1 class="font-bold text-4xl text-pink-500">Slam Book Created!</h1>
-        <p class="font-bold text-2xl">Now , Share Link With Your Friends</p>
-        <a class="pt-4 text-xl" id="link" :href="baseUrl + 'upload?name=' + name"
-          style="color: blue">{{
-          baseUrl + 'upload?name=' + name
-        }}</a>
-         <input class="" id="link">
+        <p class="font-bold pb-2 text-2xl">Now , Share Link With Your Friends</p>
+      
 
-        <input type="text" value="copyLink" id="userLink" v-model="link">
+        <input class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" type="text" :value="link+name" id="userLink" >
         <button @click="copyLink()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4 ">Copy Link</button>
       </div>
 
 
-      <div class="text-center text-white " v-else-if="isQuestionScreenActive">
+      <div class="text-left text-white " v-else-if="isQuestionScreenActive">
         <h1 class="text-4xl ">Your Friends Will Answer Thease 9 <br> Questions About You</h1>
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
@@ -37,7 +33,7 @@
 
         <p class="font-bold text-xl">9. Can I post Your Answers {{ name }}?</p>
 
-        
+
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
           @click="isSuccessScreenActive = true">FINISH</button>
       </div>
@@ -98,6 +94,7 @@
     },
     mounted() {
       this.baseUrl = window.location.href
+      this.link = this.baseUrl + 'upload?name='
     },
   }
 
