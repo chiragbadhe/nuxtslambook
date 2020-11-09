@@ -13,7 +13,7 @@
 
 
       <div class="text-center text-white " v-else-if="isQuestionScreenActive">
-        <h1 class="text-4xl ">Your Friends Will Answer Thease 9 <br> Questions About You</h1>
+        <h1 class="text-4xl ">Your Friends Will Answer These 9 <br> Questions About You</h1>
         <div class="text-left pl-4">
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
