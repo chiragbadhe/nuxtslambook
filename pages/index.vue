@@ -21,27 +21,23 @@
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
-        <p class="font-bold text-xl">2. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">2. Colour which suits {{ name }}?</p>
 
-        <p class="font-bold text-xl">3. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">3. One Thing You Like in {{ name }}?</p>
 
-        <p class="font-bold text-xl">4. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">4. One Thing You Dislike in {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">5. Things that are similar in You and {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">6. Any sweet memories with {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">7. Your relationship with {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">8. Any song dedicated fo {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
+        <p class="font-bold text-xl">9. Can I post Your Answers {{ name }}?</p>
 
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
-
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
         
-        <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
           @click="isSuccessScreenActive = true">FINISH</button>
       </div>
