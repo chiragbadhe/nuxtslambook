@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container-lg h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
+    class="container-lg h-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
     <div class="">
       <div class="bg-white p-6 rounded-lg flex-col flex items-center" v-if="isSuccessScreenActive">
         <h1 class="font-bold text-4xl text-pink-500">Slam Book Created!</h1>
@@ -16,8 +16,8 @@
       </div>
 
 
-      <div class="bg-white text-center  border-gray-600 rounded-b-full overflow-auto" v-else-if="isQuestionScreenActive">
-        <h1 class="text-4xl font-bold p-4 bg-gra-200 overflow-auto bg-gray-200 border-b-double border-8">Your Friends Will Answer Thease 9 Questions About You</h1>
+      <div class="text-center" v-else-if="isQuestionScreenActive">
+        <h1 class="text-4xl ">Your Friends Will Answer Thease 9 Questions About You</h1>
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
