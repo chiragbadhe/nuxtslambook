@@ -180,7 +180,7 @@
         userName: '',
         questions: [{
             index: 0,
-            question: '1. Any nickname for' + this.senderName ,
+            question: '1. Any nickname for ' + this.senderName,
             answer: '',
             show: false,
           },

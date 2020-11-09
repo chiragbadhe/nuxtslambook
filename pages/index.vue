@@ -12,8 +12,9 @@
       </div>
 
 
-      <div class="text-left text-white " v-else-if="isQuestionScreenActive">
+      <div class="text-center text-white " v-else-if="isQuestionScreenActive">
         <h1 class="text-4xl ">Your Friends Will Answer Thease 9 <br> Questions About You</h1>
+        <div class="text-left pl-4">
 
         <p class="font-bold text-xl">1. Any nickname for {{ name }}?</p>
 
@@ -32,6 +33,7 @@
         <p class="font-bold text-xl">8. Any song dedicated fo {{ name }}?</p>
 
         <p class="font-bold text-xl">9. Can I post Your Answers {{ name }}?</p>
+        </div>
 
 
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
