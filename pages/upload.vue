@@ -37,7 +37,7 @@
 
     <div class=" bg-white p-6 text-center m-5 flex flex-col rounded-lg" v-else-if="questions[7].show">
         <p class="bg-gray-200 font-bold pl-4 pr-4 rounded-lg text-2xl">Sent to you by :{{ senderName }}</p>
-      <h1 class="font-bold text-4xl p-4 pb-">8. Any song dedicated fot {{ senderName }}</h1>
+      <h1 class="font-bold text-4xl p-4 pb-">8. Any song dedicated for {{ senderName }}</h1>
       <input
         class="bg-white rounded-lg border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
         v-model="questions[7].answer" placeholder="Enter Name" />
