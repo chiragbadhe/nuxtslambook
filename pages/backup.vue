@@ -2,17 +2,20 @@
   <div
     class="container-lg h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 justify-center flex flex-col items-center">
     <div class="">
-      <div class="bg-white p-6 rounded-lg flex-col flex items-center" v-if="isSuccessScreenActive">
-        <h1 class="font-bold text-4xl text-pink-500">Slam Book Created!</h1>
-        <p class="font-bold text-2xl">Now , Share Link With Your Friends</p>
-        <a class="pt-6 text-xl" id="link" :href="baseUrl + 'upload?name=' + name"
+      <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center w-screen h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 " v-if="isSuccessScreenActive">
+        <h1 class="font-bold text-6xl">Slam Book Created!</h1>
+        <p class="text-4xl">Now , Share Link With Your Friends</p>
+        <a class="text-3xl w-1/3" id="link" :href="baseUrl + 'upload?name=' + name"
           style="color: blue">{{
           baseUrl + 'upload?name=' + name
         }}</a>
-         <input class="" id="link">
+         <input class="text-3xl w-1/3" value="copyLink" id="userLink" :href="baseUrl + 'upload?name=' + name"
+          style="color: blue" {{
+          baseUrl + 'upload?name=' + name
+        }}>
 
         <input type="text" value="copyLink" id="userLink" v-model="link">
-        <button @click="copyLink()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4 ">Copy Link</button>
+        <button @click="copyLink()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full mt-4 ">Copy Link</button>
       </div>
 
 
