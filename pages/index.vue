@@ -37,7 +37,7 @@
 
 
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 m-4 rounded-full"
-          @click="isSuccessScreenActive = true">FINISH</button>
+          @click="isSuccessScreenActive = true">Create Link</button>
       </div>
       <div class="bg-white p-8 rounded-lg text-center flex flex-col" v-else-if="isEnterNameScreenActive">
         <label class="block uppercase tracking-wide text-3xl pb-3text-xs font-bold mb-4" for="grid-password">
@@ -47,7 +47,7 @@
           class="bg-white rounded-lg border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
           type="text" value="Jane Doe" placeholder="Enter Your Name" />
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full"
-          @click="isQuestionScreenActive = true">
+          @click="showConfirmation()">
           NEXT
         </button>
       </div>
@@ -71,6 +71,7 @@
 
 <script>
   export default {
+    
     data() {
       return {
         name: '',
@@ -82,6 +83,14 @@
       }
     },
     methods: {
+      showConfirmation(){
+        if(this.name) {
+          this.isQuestionScreenActive = true
+        }
+        else{
+          this.$swal("Enter Name")
+        }
+      },
       copyLink() {
         /* Get the text field */
         var copyUrl = document.getElementById("userLink");

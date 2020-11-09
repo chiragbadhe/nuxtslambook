@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-sweetalert": "^0.1.18"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.1.0"

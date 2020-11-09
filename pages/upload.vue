@@ -87,7 +87,7 @@
         class="bg-white rounded-lg border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
         v-model="questions[4].answer" placeholder="Enter Name" />
       <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full mb-2" href="#"
-        @click="show(6)"> Next </a>
+        @click="show(5)"> Next </a>
       <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" href="#"
         @click="previous(3)"> Previous </a>
     </div>
@@ -145,6 +145,7 @@
     <div class=" bg-white p-6 text-center m-5 flex flex-col rounded-lg" v-else-if="questions[0].show">
         <p class="bg-gray-200 font-bold pl-4 pr-4 rounded-lg text-2xl">Sent to you by :{{ senderName }}</p>
       <h1 class="font-bold text-4xl p-4 pb-">1. Any nickname for {{ senderName }}</h1>
+      <h5 v-if="questions[0].error"> {{questions[0].error}} </h5>
       <input
         class="bg-white rounded-lg border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
         v-model="questions[0].answer" placeholder="Enter Name" />
@@ -180,44 +181,55 @@
         userName: '',
         questions: [{
             index: 0,
-            question: '1. Any nickname for ' + this.senderName,
+            question: '1. Any nickname for ' + this.$route.query.name,
             answer: '',
             show: false,
+            error: null,
           },
 
           {
             index: 1,
-            question: '2. Colour which suits',
+            question: '2. Colour which suits' + this.$route.query.name,
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
             index: 2,
-            question: '3. One Thing You Like in ',
+            question: '3. One Thing You Like in ' + this.$route.query.name,
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
             index: 3,
-            question: '4. One Thing You Dislike in',
+            question: '4. One Thing You Dislike in' + this.$route.query.name,
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
             index: 4,
-            question: '5. Things that are similar in You and',
+            question: '5. Things that are similar in You and' + this.$route.query.name,
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
             index: 5,
-            question: '6. Any sweet memories with ',
+            question: '6. Any sweet memories with ' + this.$route.query.name,
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
@@ -225,6 +237,8 @@
             question: '7. Your relationship with',
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
@@ -232,6 +246,8 @@
             question: '8. Any song dedicated for',
             answer: '',
             show: false,
+                        error: null,
+
           },
 
           {
@@ -239,6 +255,8 @@
             question: '9. Can I post Your Answers',
             answer: '',
             show: false,
+            error: null,
+
           },
 
 
@@ -249,9 +267,19 @@
 
     methods: {
       show(index) {
-        console.log(index)
-        console.log(this.questions[index + 1])
-        this.questions[index].show = true
+        if(index === 0){
+          if(this.userName) {
+            this.questions[0].show = true}
+            else{
+              this.$swal('Enter Name')
+            }
+        }
+        else if(this.questions[index-1].answer) {
+            this.questions[index].show = true
+        }
+        else { 
+                this.$swal('Please Answer')
+        }
       },
 
       startAgain(){
