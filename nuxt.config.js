@@ -35,7 +35,11 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-  ],
+    // Simple usage
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-6659553847559987'
+    }]
+ ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
