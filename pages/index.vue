@@ -5,7 +5,7 @@
       <div class="bg-white rounded-lg p-8 text-center flex flex-col items-center w-screen h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 " v-if="isSuccessScreenActive">
         <h1 class="font-bold text-6xl">Slam Book Created!</h1>
         <p class="text-4xl">Now , Share Link With Your Friends</p>
-        <a class="text-3xl" id="link" :href="baseUrl + 'upload?name=' + name"
+        <a class="text-3xl w-1/3" id="link" :href="baseUrl + 'upload?name=' + name"
           style="color: blue">{{
           baseUrl + 'upload?name=' + name
         }}</a>
